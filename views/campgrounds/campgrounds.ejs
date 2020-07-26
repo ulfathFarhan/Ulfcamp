@@ -1,0 +1,36 @@
+<%- include("../partials/header") %>
+
+
+	<header class="jumbotron" style="background-color:#F08080">
+		<div class="container">
+				<h1>Welcome to ULFCAMP</h1>
+				<p>check out the hand-picked campgrounds from all over the world</p>
+				<p >
+			     <a class="btn btn-primary btn -large" href="/campgrounds/new">Add new camp grounds</a>
+				</p>
+		</div>
+	
+   </header>
+	<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+	     <% campgrounds.forEach(function(camp) {%>
+         <div class="col-md-4 col-sm-6">
+	         <div >
+		        <img src="<%=camp.image%>" class="img-thumbnail img-fluid">
+		         <div class="caption">
+			     <h5><%= camp.name%></h5>
+		          </div>
+				 <p>
+					 <a href ="/campgrounds/<%=camp._id %>" class="btn btn-primary">More Info</a>
+				 </p>
+	          </div>
+	
+           </div>				   
+     <% }); %>
+		
+		
+    </div>
+
+
+<%- include("../partials/footer") %>
+
+
