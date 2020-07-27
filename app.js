@@ -31,7 +31,9 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 //flash
 app.use(flash());
-mongoose.connect("mongodb://localhost:27017/ulf_camp" ,{ useNewUrlParser: true , useUnifiedTopology: true });
+// mongoose.connect("mongodb://localhost:27017/ulf_camp" ,{ useNewUrlParser: true , useUnifiedTopology: true });
+ mongoose.connect("mongodb+srv://ulfath_farhan:Nabiha@2008@cluster0.ypv5j.mongodb.net/UlfCamp?retryWrites=true&w=majority",{ useNewUrlParser: true , useUnifiedTopology: true });
+
 //App config
 app.use(bodyPaser.urlencoded({extended:true}));
 app.set("view engine","ejs");
